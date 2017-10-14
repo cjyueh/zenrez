@@ -1,0 +1,39 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 1200px
+}
+
+.class__list {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.class__card {
+  display: block;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0px 0px 10px 0px #c9c9c9;
+  -moz-box-shadow: 0px 0px 10px 0px #c9c9c9;
+  box-shadow: 0px 0px 10px 0px #c9c9c9;
+  height: 150px;
+}
+
+.class__pic, .class__info, .class__price {
+  display: inline-block;
+}
+
+.class__pic {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-right: 1px solid #f1f1f1;
+  width: 25%;
+  height: 100%;
+}
