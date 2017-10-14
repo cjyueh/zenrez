@@ -16,23 +16,23 @@
     <header>
       <div class='nav-link'>
         <div class='nav-link__left'>
-          <h2>Zenrez Exercise</h2>
+          <h1>Zenrez Exercise</h1>
         </div>
       </div>
     </header>
     <section>
-      <h1 class='section-title'>Class List</h1>
+      <span class='section-title'>Class List</span>
       <div class='class__list'>
         <script id='class-card-template' type='text/x-handlebars-template'>​
           {{#each this}}
             <a href='#' data-index='{{id}}' class='class__card'>
               <div class='class__pic' style='background-image:url("{{img_url}}")'></div>
               <div class='class__info'>
-                <h3 class='class__title'>{{title}} with {{instructor}}</h3>
-                <h4 class='class__time'>{{start_time}} - {{end_time}}</h4>
+                <h2 class='class__title'>{{title}} with {{instructor}}</h2>
+                <h3 class='class__time'>{{start_time}} - {{end_time}}</h3>
               </div>
               <div class='class__price'>
-                <h2>${{price}}</h2>
+                <h1>${{price}}</h1>
               </div>
             </a>
           {{/each}}
