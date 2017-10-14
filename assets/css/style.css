@@ -19,10 +19,11 @@ a {
 .class__card {
   display: block;
   margin-bottom: 1em;
-  -webkit-box-shadow: 0px 0px 10px 0px #c9c9c9;
-  -moz-box-shadow: 0px 0px 10px 0px #c9c9c9;
-  box-shadow: 0px 0px 10px 0px #c9c9c9;
+  -webkit-box-shadow: 0 0 10px 0 #c9c9c9;
+  -moz-box-shadow: 0 0 10px 0 #c9c9c9;
+  box-shadow: 0 0 10px 0 #c9c9c9;
   height: 150px;
+  color: #545454;
 }
 
 .class__pic, .class__info, .class__price {
@@ -36,4 +37,11 @@ a {
   border-right: 1px solid #f1f1f1;
   width: 25%;
   height: 100%;
+}
+
+.class__info {
+  position: relative;
+  top: -30%;
+  margin: 0 1.5em;
+  width: 60%;
 }
