@@ -7,39 +7,37 @@
   <meta name='viewport' content='width=device-width,initial-scale=1'>
 
   <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400,500|Signika:300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300,400,500|Signika:300' rel='stylesheet'>
   <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 </head>
 
 <body>
-  <div id='app'>
-    <header>
-      <div class='nav-link'>
-        <div class='nav-link__left'>
-          <h1>Zenrez Exercise</h1>
-        </div>
-      </div>
-    </header>
-    <section>
-      <span class='section-title'>Class List</span>
-      <div class='class__list'>
-        <script id='class-card-template' type='text/x-handlebars-template'>​
-          {{#each this}}
-            <a href='#' data-index='{{id}}' class='class__card'>
-              <div class='class__pic' style='background-image:url("{{img_url}}")'></div>
-              <div class='class__info'>
-                <h2 class='class__title'>{{title}} with {{instructor}}</h2>
-                <h3 class='class__time'>{{start_time}} - {{end_time}}</h3>
-              </div>
-              <div class='class__price'>
-                <h1>${{price}}</h1>
-              </div>
-            </a>
-          {{/each}}
-        </script> 
-      </div>
-    </section>
-  </div>
+  <header>
+    <div class='header__content'>
+      <a href="/">
+        <img src="images/logo.svg" alt="logo" />
+      </a>
+    </div>
+  </header>
+  <section>
+    <span class='section-title'>Class List</span>
+    <div class='class__list'>
+      <script id='class-card-template' type='text/x-handlebars-template'>​
+        {{#each this}}
+          <a href='#' data-index='{{id}}' class='class__card'>
+            <div class='class__pic' style='background-image:url("{{img_url}}")'></div>
+            <div class='class__info'>
+              <h2 class='class__title'>{{title}} with {{instructor}}</h2>
+              <h3 class='class__time'>{{start_time}} - {{end_time}}</h3>
+            </div>
+            <div class='class__price'>
+              <h1>${{price}}</h1>
+            </div>
+          </a>
+        {{/each}}
+      </script> 
+    </div>
+  </section>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
   <script type='text/javascript' src='assets/scripts/script.js'></script>
