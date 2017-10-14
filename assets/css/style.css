@@ -1,5 +1,7 @@
-* {
-  font-family: 'Source Sans Pro', sans-serif;
+body {
+  background-color: #efefef;
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -11,7 +13,18 @@ a {
   max-width: 1200px
 }
 
+.section-title {
+  position: fixed;
+  margin: 0 auto;
+  z-index: 0;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 10em;
+  color: #a9a9a9;
+}
+
 .class__list {
+  z-index: 100;
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -19,9 +32,11 @@ a {
 .class__card {
   display: block;
   margin-bottom: 1em;
-  -webkit-box-shadow: 0 0 10px 0 #c9c9c9;
-  -moz-box-shadow: 0 0 10px 0 #c9c9c9;
-  box-shadow: 0 0 10px 0 #c9c9c9;
+  border: 1px solid #a9a9a9;
+  /*-webkit-box-shadow: 0 0 10px 0 #a9a9a9;
+  -moz-box-shadow: 0 0 10px 0 #a9a9a9;
+  box-shadow: 0 0 10px 0 #a9a9a9;*/
+  background-color: #ffffff;
   height: 150px;
   color: #545454;
 }
@@ -44,6 +59,16 @@ a {
   top: -30%;
   margin: 0 2%;
   width: 55%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.class__title {
+  font-weight: 500;
+}
+
+.class__time {
+  letter-spacing: 1.25px;
+  font-weight: 300;
 }
 
 .class__price {
@@ -51,13 +76,14 @@ a {
   top: -40%;
   width: 15%;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-.class__price > h1 {
+.class__price > h2 {
+  background-color: #ff383f;
+  /*border-radius: 24px;*/
   margin: 0 auto;
   width: 60%;
   line-height: 1.5;
-  /*border-radius: 24px;*/
-  background-color: #48BC94;
   color: #ffffff;
 }
