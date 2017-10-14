@@ -6,5 +6,12 @@ $.getJSON( api, function(data) {
   // set classes in JSON data as classes
   classes = data.classes;
   console.log(classes);
-  $('.class-list').append('<p>' + classes[0].id +'</p>');
+  showAllClasses(classes);
 });
+
+function showAllClasses(data) {
+  var list = $('.class__list');
+  var classCardTemplate = $('#class-card-template').html();
+  var template = Handlebars.compile(classCardTemplate);
+  list.append(template(data));
+}

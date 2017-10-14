@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
   <title>Zenrez Exercise</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
 
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet'>
+  <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 </head>
 
 <body>
@@ -19,13 +19,26 @@
         </div>
       </div>
     </nav>
-    <div class='class-list'>
+    <ul class='class__list'>
       <h2>Class List</h2>
-      
-    </div>
+      <script id='class-card-template' type='text/x-handlebars-template'>​
+        {{#each this}}
+          <li data-index="{{id}}" class="class__item">
+            <a href="#" class="class__link">
+              <img src="{{img_url}}" height="130" alt="{{title}}" class="class__pic" />
+              <h2 class="class__title">{{title}} with {{instructor}}</h2>
+              <h3 class="class__time">{{start_time}} - {{end_time}}</h3>
+              <div class="class__price">
+                <h4>${{price}}</h4>
+              </div>
+            </a>
+          </li>
+        {{/each}}
+      </script> 
+    </ul>
   </div>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  <script type="text/javascript" src="assets/scripts/script.js"></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+  <script type='text/javascript' src='assets/scripts/script.js'></script>
 </body>
 </html>
