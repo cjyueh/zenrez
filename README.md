@@ -1,6 +1,17 @@
-## FE Take-home: Class List UI
+## Zenrez "FE Take-home: Class List UI"
+by Christina Yueh
 
-### Goal
+### To View Demo
+
+Download this repo and launch the index.html file in your browser. This is a webapp, built for the laptops and desktops only, and displays a listing of classes. The user is able to click on any one class to see more detailed information of the selected class.
+
+### Built With
+
+* jQuery library
+* Handlebars.js templating
+
+### Project Brief
+#### Goal
 
 For this assignment, you are working with a fitness studio to display a list of their hot new classes!
 
@@ -18,7 +29,7 @@ The studio would like each class to be displayed in a format similar to the foll
 
 ![Class row mock](images/class_row.png)
 
-### Guidelines
+#### Guidelines
 
 * Please use JavaScript, but feel free to use any frameworks/libraries/build tools you prefer.
 * Share the code with us by sharing a Github repository or zipping the entire repo and emailing it to us.
@@ -26,7 +37,7 @@ The studio would like each class to be displayed in a format similar to the foll
 * Please spend no more than ~4 hours working on the assignment. Try to find a consecutive block of time to work on it if you can.
 * Think about what kind of user experience would be delightful to you.
 
-### Additional features
+#### Additional features
 
 The studio has other ideas on how to improve their website. If they have more of your time, their next top requests would be:
 
