@@ -14,13 +14,14 @@
 <body>
   <header>
     <div class='header__content'>
-      <a href="/">
+      <a href="">
         <img src="images/logo.svg" alt="logo" />
       </a>
     </div>
   </header>
-  <section>
-    <span class='section-title'>Class List</span>
+
+  <section id='classes'>
+    <span class='section-title'>Class List.</span>
     <img class='section-bg' src="images/logo-filled.svg" alt="logo" />
     <div class='class__list'>
       <script id='class-card-template' type='text/x-handlebars-template'>​
@@ -37,8 +38,32 @@
           </a>
         {{/each}}
       </script> 
-    </div>
-  </section>
+    </div><!-- end .class-list -->
+  </section><!-- end #classes -->
+
+  <div class='class-page'>
+    <script id='class-page-template' type='text/x-handlebars-template'>​
+      <div class='class-page__overlay'></div>
+      <div class='class-page__content'>
+        <span class="class-page__close">×</span>
+        <div class='class-page__pic' style='background-image:url("{{img_url}}")'></div>
+        <div class='class-page__info-col' id='class-page__info-left'>
+          <h2 class='class-page__title'>{{title}}</h2>
+          <h4 class='class-page__subtitle'>Instructor</h4>
+          <h3 class='class-page__details'>{{instructor}}</h3>
+          <h4 class='class-page__subtitle'>Class Time</h4>
+          <h3 class='class-page__details'>{{start_time}} - {{end_time}}</h3>
+          <div class='class-page__price'>
+            <h2>${{price}}</h2>
+          </div>
+        </div>
+        <div class='class-page__info-col' id='class-page__info-right'>
+          <p class='class-page__description'>{{description}}</p>
+        </div>
+      </div>
+    </script> 
+  </div><!-- end .class-list -->
+
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
   <script type='text/javascript' src='assets/scripts/script.js'></script>

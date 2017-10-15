@@ -1,8 +1,9 @@
 body {
-  background: #ECE9E6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ECE9E6;
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
   font-family: 'Signika', sans-serif;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -32,7 +33,6 @@ header {
 
 .header__content {
   max-width: 1200px;
-  /*line-height: 75px;*/
   margin: 0 auto;
   color: #545454;
 }
@@ -92,7 +92,9 @@ section {
   box-shadow: 0 0 20px 0 #a9a9a9;
 }
 
-.class__pic, .class__info, .class__price {
+.class__pic,
+.class__info,
+.class__price {
   display: inline-block;
 }
 
@@ -135,5 +137,85 @@ section {
   margin: 0 auto;
   width: 75%;
   line-height: 1.5;
-  /*color: #ffffff;*/
+}
+
+.class-page {
+  display: none;
+  transition: .3s ease-in-out;
+}
+
+.class-page.show-page {
+  display: block;
+  z-index: 200;
+}
+
+.class-page__overlay {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(84, 84, 84, .85);
+}
+
+.class-page__content {
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  transform: translate(-400px, -325px);
+  width: 800px;
+  height: 650px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.class-page__close {
+  position: fixed;
+  z-index: 300;
+  top: -20px;
+  right: -40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  color: #ff383f;
+  cursor: pointer;
+}
+
+.class-page__pic {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 60%;
+}
+
+.class-page__info-col {
+  float: left;
+  width: 45%;
+  margin: 2.5% 0;
+  padding: 0 2.25%;
+}
+
+#class-page__info-left {
+  text-align: right;
+  border-right: 1px solid #f1f1f1;
+}
+
+.class-page__subtitle {
+  margin-top: .5em;
+  text-transform: lowercase;
+  letter-spacing: 1.25px;
+  font-weight: 300;
+  color: #ff383f;
+}
+
+.class-page__price {
+  margin-top: 1em;
+}
+
+.class-page__description {
+  margin: 0;
+  line-height: 1.4;
 }
