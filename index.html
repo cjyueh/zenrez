@@ -14,12 +14,13 @@
 <body>
   <header>
     <div class='header__content'>
-      <a href="/">
+      <a href="">
         <img src="images/logo.svg" alt="logo" />
       </a>
     </div>
   </header>
-  <section>
+
+  <section id='classes'>
     <span class='section-title'>Class List</span>
     <img class='section-bg' src="images/logo-filled.svg" alt="logo" />
     <div class='class__list'>
@@ -37,8 +38,22 @@
           </a>
         {{/each}}
       </script> 
-    </div>
-  </section>
+    </div><!-- end .class-list -->
+  </section><!-- end #classes -->
+
+  <div class='class-page'>
+    <script id='class-page-template' type='text/x-handlebars-template'>​
+      <div class='class-page__pic' style='background-image:url("{{img_url}}")'></div>
+      <div class='class-page__info'>
+        <h2 class='class-page__title'>{{title}} with {{instructor}}</h2>
+        <h3 class='class-page__time'>{{start_time}} - {{end_time}}</h3>
+      </div>
+      <div class='class-page__price'>
+        <h1>${{price}}</h1>
+      </div>
+    </script> 
+  </div><!-- end .class-list -->
+
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
   <script type='text/javascript' src='assets/scripts/script.js'></script>
