@@ -3,11 +3,9 @@ var classes = [];
 var selectClass;
 
 // get JSON data from provided api
-$.getJSON( api, function(data) {
+$.getJSON(api, function(data) {
   // set classes in JSON data as classes
   classes = data.classes;
-  console.log(classes);
-
   showAllClasses(classes);
 });
 
@@ -17,15 +15,13 @@ function showAllClasses(data) {
   var classCardTemplate = $('#class-card-template').html();
   var template = Handlebars.compile(classCardTemplate);
   list.append(template(data));
-  // on click...
+  // on click, get class is and add as hash, display single class view
   list.find($('.class__card')).on('click', function(e) {
     e.preventDefault();
     var classIndex = $(this).data('index');
-    // add hash id for class card to url
     window.location.hash = classIndex;
 
     selectClass = $(data[classIndex - 1]);
-    console.log(selectClass[0]);
     showClassPage(selectClass[0]);
   });
 }
@@ -40,7 +36,6 @@ function showClassPage(data) {
 
   // close class page
   classPage.find($('.class-page__close')).on('click', function(e) {
-    console.log('close clicked!');
     classPage.removeClass('show-page');
   });
 }
