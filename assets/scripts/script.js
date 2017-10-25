@@ -52,7 +52,7 @@ function showClassPage(data) {
   classPage.append(template(data));
   classPage.addClass('show-page');
 
-  // close class page
+  // close class page & remove content
   classPage.find($('.class-page__close')).on('click', function(e) {
     classPage.removeClass('show-page');
     $('.class-page__overlay').remove();
