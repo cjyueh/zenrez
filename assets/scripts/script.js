@@ -55,6 +55,8 @@ function showClassPage(data) {
   // close class page
   classPage.find($('.class-page__close')).on('click', function(e) {
     classPage.removeClass('show-page');
+    $('.class-page__overlay').remove();
+    $('.class-page__content').remove();
   });
 }
 
