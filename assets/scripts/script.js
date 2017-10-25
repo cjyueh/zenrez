@@ -2,6 +2,24 @@ var api = 'https://zenrez-interview.herokuapp.com/classes';
 var classes = [];
 var selectClass;
 
+// application/json, needs classId, response 201 success/error
+var book = 'https://zenrez-interview.herokuapp.com/book-class';
+function bookClass(id) {
+  $.ajax({
+    url: book,
+    method: "POST",
+    data: {classId: id},
+    success: function() {
+      console.log('success');
+      $('.btn-book').html('Class is Booked');
+    },
+    error: function() {
+      console.log('too bad');
+      $('.btn-book').html('You Missed This Class');
+    }
+  });
+}
+
 // get JSON data from provided api
 $.getJSON(api, function(data) {
   // set classes in JSON data as classes
@@ -39,3 +57,4 @@ function showClassPage(data) {
     classPage.removeClass('show-page');
   });
 }
+
